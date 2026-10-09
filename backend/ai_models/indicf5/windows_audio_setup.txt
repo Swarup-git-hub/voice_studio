@@ -1,0 +1,28 @@
+﻿INDICF5 WINDOWS AUDIO RUNTIME
+
+Python:
+D:\swarup\swarup.vscode\ai_voice_studio(my)\indicf5_env\Scripts\python.exe
+
+Shared FFmpeg:
+
+
+Startup file:
+
+
+Torch:
+2.11.0+cu128
+
+TorchAudio:
+2.11.0+cu128
+
+TorchCodec:
+0.13.0+cpu
+
+Automatic DLL registration:
+PASSED
+
+TorchCodec import:
+PASSED
+
+Reference decode:
+PASSED

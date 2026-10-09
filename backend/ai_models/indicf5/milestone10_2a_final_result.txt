@@ -1,0 +1,131 @@
+﻿MILESTONE 10.2A — INDICF5 GPU EXECUTION
+=======================================
+
+Date:
+2026-07-20 20:03:05
+
+Model:
+ai4bharat/IndicF5
+
+GPU:
+NVIDIA RTX A3000 Laptop GPU — 6 GB
+
+Model Parameters:
+350,628,454
+
+GPU Movement:
+PASSED
+
+All exposed parameters moved from CPU to cuda:0.
+
+CUDA Allocation After Model Movement:
+Approximately 1346 MB
+
+Verified English Peak CUDA Allocation:
+Approximately 1418 MB
+
+============================================================
+GPU PERFORMANCE
+============================================================
+
+Case    Status GenerationSeconds AudioSeconds RealTimeFactor PeakCudaMB
+----    ------ ----------------- ------------ -------------- ----------
+english passed              9.57        5.792           1.65    1417.97
+telugu  passed             12.07        9.407           1.28     1436.0
+mixed   passed               9.5        5.941            1.6    1418.53
+
+Technical Decision:
+PASSED
+
+IndicF5 loads successfully, moves to cuda:0, and generates
+English, Telugu, and mixed Telugu-English output on the GPU.
+
+The custom low-level CUDA loader is not required.
+
+Verified English Performance:
+CPU generation: 89.63 seconds
+GPU generation: 10.74 seconds
+Speedup: approximately 8.35 times
+GPU real-time factor: 1.85
+
+============================================================
+OBJECTIVE AUDIO DIAGNOSTIC
+============================================================
+
+Language Finite PeakDBFS RMSDBFS    DCOffset ClippingPercent Issues                    
+-------- ------ -------- -------    -------- --------------- ------                    
+english    True    -1.18   -20.0 -0.00018089             0.0 no_basic_waveform_fault_de
+                                                             tected                    
+telugu     True    -1.19  -19.99 -0.00015457             0.0 no_basic_waveform_fault_de
+                                                             tected                    
+mixed      True    -1.88  -19.97 -0.00020255             0.0 no_basic_waveform_fault_de
+                                                             tected
+
+Audio Diagnostic Decision:
+PASSED — no basic waveform fault detected.
+
+The generated files contain finite samples. No meaningful
+digital clipping or significant DC offset was detected.
+
+The audible disturbance is therefore more likely related to
+model generation, Vocos output, reference characteristics, or
+pronunciation instability than WAV encoding or basic amplitude
+failure.
+
+============================================================
+LISTENING QUALITY
+============================================================
+
+English:
+Not creator-ready. Incorrect words, weak rhythm, flat emotion,
+uncertain sentence intelligibility, and minor disturbance remain.
+
+Telugu:
+Best current IndicF5 result. Better than CPU, but only partially
+creator-ready because some incorrect words, weak emotion, and
+minor disturbance remain.
+
+Mixed Telugu-English:
+Not creator-ready. Telugu pronunciation is acceptable, but
+English terms, language switching, rhythm, and emotion require
+improvement.
+
+============================================================
+FINAL DECISION
+============================================================
+
+GPU Technical Gate:
+PASSED
+
+GPU Performance Gate:
+PASSED
+
+Basic Waveform Quality Gate:
+PASSED
+
+Creator Quality Gate:
+PARTIALLY PASSED
+
+Leading Telugu Engine:
+IndicF5 GPU
+
+English Engine:
+Undecided between IndicF5 and CosyVoice
+
+Mixed-Language Engine:
+Undecided. Neither raw engine is currently creator-ready.
+
+Product Decision:
+Proceed with a persistent IndicF5 GPU service on port 8002.
+
+Do not yet expose raw IndicF5 generation as the final publishing
+workflow for mixed Telugu-English content.
+
+Remaining quality work:
+1. English pronunciation aliases
+2. Telugu-English phrase segmentation
+3. Controlled phrase-level generation
+4. Audio joining with natural pauses
+5. Emotion and style references
+6. Reference-quality experiments
+7. Conservative artifact reduction

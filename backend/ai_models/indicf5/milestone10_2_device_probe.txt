@@ -1,0 +1,17 @@
+﻿MILESTONE 10.2 DEVICE PROBE
+
+Date:
+2026-07-19 22:18:54
+
+Probe output:
+backend\ai_models\indicf5\device_probe_output.txt
+
+Reason:
+IndicF5 generation required approximately 89 to 124 seconds
+for approximately 6 to 9 seconds of audio.
+
+Reported CUDA tensor memory during the original benchmark:
+0 to 8 MB
+
+Decision:
+See device_probe_output.txt for the confirmed model placement.

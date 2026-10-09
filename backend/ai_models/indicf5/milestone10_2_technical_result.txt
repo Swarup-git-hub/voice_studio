@@ -1,0 +1,155 @@
+﻿MILESTONE 10.2 — INDICF5 BENCHMARK RESULT
+=========================================
+
+Date:
+2026-07-19 21:33:05
+
+Model:
+ai4bharat/IndicF5
+
+Reference Voice:
+Swarup-10
+
+Reference File:
+reference_a676a66d93a748508262ee445cdd6138.wav
+
+Reference Language:
+English
+
+Reference Duration:
+10.09 seconds
+
+Reference Synchronization:
+Exact stored reference audio and transcript
+
+============================================================
+TECHNICAL RESULTS
+============================================================
+
+Model Load:
+PASSED
+
+Model Load Time:
+7.69 seconds
+
+English Generation:
+PASSED
+
+English Generation Time:
+89.63 seconds
+
+English Audio Duration:
+5.792 seconds
+
+English Real-Time Factor:
+15.47
+
+Telugu Generation:
+PASSED
+
+Telugu Generation Time:
+123.65 seconds
+
+Telugu Audio Duration:
+9.427 seconds
+
+Telugu Real-Time Factor:
+13.12
+
+Mixed Telugu-English Generation:
+PASSED
+
+Mixed Generation Time:
+93.66 seconds
+
+Mixed Audio Duration:
+5.941 seconds
+
+Mixed Real-Time Factor:
+15.77
+
+Combined Real-Time Factor:
+14.51
+
+Output Format:
+24 kHz, mono, PCM 16-bit WAV
+
+Technical Benchmark:
+PASSED — 3 of 3 outputs generated successfully
+
+============================================================
+QUALITY RESULTS
+============================================================
+
+English:
+Partially passed.
+
+English output completed, but several words were spoken
+incorrectly. Voice resemblance was weak to medium, rhythm
+was weak, emotion was flat, and audio clarity was poor.
+
+English comparison with CosyVoice:
+Similar. Neither engine currently provides consistently
+creator-ready English output.
+
+Telugu:
+Partially passed and currently the strongest IndicF5 result.
+
+The complete Telugu sentence was generated with no repeated
+words or major pauses. Telugu pronunciation was medium,
+voice resemblance was medium, rhythm was medium to strong,
+and audio clarity was acceptable.
+
+The beginning of the Telugu sentence contained pronunciation
+errors, and expression was not fully natural.
+
+Mixed Telugu-English:
+Failed the creator-quality gate.
+
+The sentence completed, but English technical words including
+Browser, U R L, type, Enter, next, and exactly were not spoken
+correctly. Language switching sounded unnatural, rhythm was
+weak to medium, emotion was flat, and the output contained
+audible disturbance.
+
+Mixed comparison with CosyVoice:
+Similar. Neither engine currently produces a creator-ready
+mixed Telugu-English result.
+
+============================================================
+FINAL DECISION
+============================================================
+
+IndicF5 Technical Gate:
+PASSED
+
+IndicF5 Quality Gate:
+PARTIALLY PASSED
+
+Best Current Telugu Engine:
+IndicF5
+
+Best Current English Engine:
+Undecided between CosyVoice and IndicF5
+
+Best Current Mixed-Language Engine:
+Undecided. Neither engine is creator-ready.
+
+Primary Remaining Problems:
+1. Incorrect English and technical-word pronunciation
+2. Unnatural Telugu-English language switching
+3. Weak to medium voice resemblance
+4. Flat emotion
+5. Poor mixed-language clarity
+6. Slow generation speed
+7. Probable CPU execution despite CUDA availability
+
+Product Decision:
+Preserve IndicF5 as the leading Telugu engine candidate.
+
+Do not yet make IndicF5 the default production engine.
+
+Before backend integration, verify model device placement and
+improve GPU execution performance. After that, implement
+language-aware preprocessing, pronunciation aliases,
+phrase-level generation, and audio joining.

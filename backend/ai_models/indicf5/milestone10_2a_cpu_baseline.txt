@@ -1,0 +1,38 @@
+﻿MILESTONE 10.2A — CPU BASELINE
+==============================
+
+Date:
+2026-07-20 18:48:16
+
+Model:
+ai4bharat/IndicF5
+
+Device:
+CPU-only parameters confirmed by device probe
+
+GPU Available:
+NVIDIA RTX A3000 Laptop GPU — 6 GB
+
+English:
+89.63 seconds generation
+5.792 seconds audio
+RTF: 15.47
+
+Telugu:
+123.65 seconds generation
+9.427 seconds audio
+RTF: 13.12
+
+Mixed Telugu-English:
+93.66 seconds generation
+5.941 seconds audio
+RTF: 15.76
+
+Quality Result:
+English — similar to CosyVoice
+Telugu — strongest current result, partially creator-ready
+Mixed — not creator-ready
+
+Decision:
+Preserve this as the CPU performance and quality baseline.
+Next step is a controlled GPU movement test.

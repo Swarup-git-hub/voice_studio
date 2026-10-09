@@ -1,0 +1,17 @@
+﻿MILESTONE 10.1 COSYVOICE BASELINE
+
+Voice ID: 10
+Voice name: Swarup-10
+
+Benchmark:
+When the reference audio and transcript match exactly, the generated voice should remain stable, clear, and consistent.
+
+Evaluation:
+- All intended words spoken: Yes, but some words repeated
+- Sentence completed: Yes, but parts were spoken incorrectly
+- Unexpected pauses: Few
+- Voice resemblance: Weak to medium
+- Creator-ready: No
+
+Conclusion:
+Reference synchronization works technically, but CosyVoice quality is not sufficient for the final product.

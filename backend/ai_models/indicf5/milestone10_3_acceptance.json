@@ -1,0 +1,72 @@
+﻿{
+    "milestone":  "10.3",
+    "created_at":  "2026-07-21 19:32:37",
+    "service":  {
+                    "device":  "cuda:0",
+                    "base_uri":  "http://127.0.0.1:8002",
+                    "process_id":  23668,
+                    "cuda_allocated_mb":  1355.15,
+                    "status":  "healthy",
+                    "gpu_name":  "NVIDIA RTX A3000 Laptop GPU",
+                    "cuda_reserved_mb":  1514.0,
+                    "cuda_available":  true
+                },
+    "model":  {
+                  "load_seconds":  15.7,
+                  "loaded":  true,
+                  "cuda_parameters":  350628454,
+                  "cpu_parameters":  0,
+                  "total_parameters":  350628454
+              },
+    "first_generation":  {
+                             "sample_rate":  24000,
+                             "output_path":  "D:\\swarup\\swarup.vscode\\ai_voice_studio(my)\\backend\\ai_models\\indicf5\\server_outputs\\indicf5_e062e9bec8154d6da7f1a39223b204ed.wav",
+                             "generation_seconds":  22.093,
+                             "output_file":  "indicf5_e062e9bec8154d6da7f1a39223b204ed.wav",
+                             "audio_duration_seconds":  8.49,
+                             "real_time_factor":  2.602,
+                             "peak_cuda_mb":  1436.15,
+                             "status":  "completed",
+                             "channels":  1
+                         },
+    "second_generation":  {
+                              "generation_seconds":  22.058,
+                              "status":  "completed",
+                              "audio_duration_seconds":  9.587,
+                              "real_time_factor":  2.301,
+                              "output_file":  "indicf5_e49b0cf0a8d042c994fd3b2393bf33d6.wav"
+                          },
+    "persistence":  {
+                        "same_process":  true,
+                        "unique_outputs":  true,
+                        "same_load_record":  true
+                    },
+    "download":  {
+                     "downloaded_file":  "D:\\swarup\\swarup.vscode\\ai_voice_studio(my)\\backend\\ai_models\\indicf5\\server_test_download.wav",
+                     "hashes_match":  true,
+                     "original_sha256":  "E8D133F3EEE27E27CA8BC674AB1E80FBE81E63F5B0F17E70602C5855D450210B",
+                     "downloaded_sha256":  "E8D133F3EEE27E27CA8BC674AB1E80FBE81E63F5B0F17E70602C5855D450210B"
+                 },
+    "concurrency":  {
+                        "unique_outputs":  2,
+                        "combined_generation_seconds":  26.17,
+                        "completed_responses":  2,
+                        "wall_seconds":  27.13
+                    },
+    "invalid_reference_test":  {
+                                   "expected_status":  400,
+                                   "response":  "{\"detail\":\"Reference audio was not found: D:\\\\swarup\\\\swarup.vscode\\\\ai_voice_studio(my)\\\\backend\\\\app\\\\voices\\\\missing_reference_file.wav\"}",
+                                   "actual_status":  400
+                               },
+    "shutdown":  {
+                     "verified_at":  "2026-07-21 19:50:20",
+                     "port_8002_closed":  true,
+                     "recorded_process_id":  23668,
+                     "server_process_stopped":  true,
+                     "gpu_before_shutdown":  "Not preserved after the terminal/session switch.",
+                     "gpu_after_shutdown":  "NVIDIA RTX A3000 Laptop GPU, 6144 MiB, 0 MiB, 5989 MiB",
+                     "gpu_memory_released":  true
+                 },
+    "acceptance_before_shutdown":  "passed",
+    "final_acceptance":  "passed"
+}

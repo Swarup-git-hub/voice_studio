@@ -1,0 +1,169 @@
+﻿MILESTONE 10.3 — INDICF5 GPU SERVICE ACCEPTANCE
+================================================
+
+Date:
+2026-07-21 19:32:49
+
+Service:
+http://127.0.0.1:8002
+
+Health:
+healthy
+
+Device:
+cuda:0
+
+CUDA Available:
+True
+
+GPU:
+NVIDIA RTX A3000 Laptop GPU
+
+Model Loaded:
+True
+
+Total Parameters:
+350628454
+
+CPU Parameters:
+0
+
+CUDA Parameters:
+350628454
+
+Model Load Time:
+15.7 seconds
+
+============================================================
+FIRST GENERATION
+============================================================
+
+Status:
+completed
+
+Generation Time:
+22.093 seconds
+
+Audio Duration:
+8.49 seconds
+
+Real-Time Factor:
+2.602
+
+Peak CUDA:
+1436.15 MB
+
+Output:
+indicf5_e062e9bec8154d6da7f1a39223b204ed.wav
+
+============================================================
+SECOND GENERATION
+============================================================
+
+Status:
+completed
+
+Generation Time:
+22.058 seconds
+
+Audio Duration:
+9.587 seconds
+
+Real-Time Factor:
+2.301
+
+Output:
+indicf5_e49b0cf0a8d042c994fd3b2393bf33d6.wav
+
+============================================================
+PERSISTENCE
+============================================================
+
+Same Process:
+True
+
+Same Model Load Record:
+True
+
+Unique Output Files:
+True
+
+============================================================
+DOWNLOAD
+============================================================
+
+SHA256 Hashes Match:
+True
+
+============================================================
+GENERATION LOCK
+============================================================
+
+Completed Responses:
+2
+
+Unique Outputs:
+2
+
+Wall Time:
+27.13 seconds
+
+Combined Generation Time:
+26.17 seconds
+
+============================================================
+CONTROLLED FAILURE
+============================================================
+
+Invalid Reference Expected Status:
+400
+
+Invalid Reference Actual Status:
+400
+
+============================================================
+ACCEPTANCE DECISION
+============================================================
+
+All running-service tests:
+PASSED
+
+Remaining acceptance test:
+Graceful shutdown, port closure, process termination, and GPU
+memory release.
+
+============================================================
+GRACEFUL SHUTDOWN
+============================================================
+
+Shutdown Verification Date:
+2026-07-21 19:46:15
+
+Port 8002 Closed:
+True
+
+Server Process Stopped:
+True
+
+GPU Before Shutdown:
+Not preserved after the terminal/session switch.
+
+GPU After Shutdown:
+NVIDIA RTX A3000 Laptop GPU, 6144 MiB, 0 MiB, 5989 MiB
+
+GPU Memory Release:
+PASSED — GPU usage returned to 0 MiB.
+
+============================================================
+FINAL ACCEPTANCE DECISION
+============================================================
+
+PASSED
+
+Milestone 10.3 is complete.
+
+The IndicF5 model loads once, remains on cuda:0, generates
+valid WAV files through HTTP, supports output downloads,
+serializes concurrent GPU requests, rejects invalid references
+safely, terminates the server process correctly, closes port
+8002, and releases GPU memory during shutdown.

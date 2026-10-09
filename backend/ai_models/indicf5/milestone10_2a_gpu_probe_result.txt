@@ -1,0 +1,57 @@
+﻿MILESTONE 10.2A — SUCCESSFUL INDICF5 GPU PROBE
+================================================
+
+Date:
+2026-07-20 19:00:12
+
+Model:
+ai4bharat/IndicF5
+
+GPU:
+NVIDIA RTX A3000 Laptop GPU — 6 GB
+
+Torch:
+2.11.0+cu128
+
+GPU Movement:
+passed
+
+GPU Inference:
+passed
+
+Model Movement Time:
+1.44 seconds
+
+Generation Time:
+10.19 seconds
+
+Generated Audio Duration:
+4.897 seconds
+
+Real-Time Factor:
+2.08
+
+Peak CUDA Memory:
+1417.49 MB
+
+Output:
+D:\swarup\swarup.vscode\ai_voice_studio(my)\backend\ai_models\indicf5\outputs\indicf5_gpu_probe_telugu.wav
+
+Listening Evaluation:
+- Sentence completed: Yes
+- Telugu pronunciation: Better than CPU
+- Voice resemblance: Acceptable
+- Noise or distortion: Present; quality improvement required
+- Quality compared with CPU: Good
+
+Technical Decision:
+The standard model.to("cuda:0") path works successfully.
+A low-level custom CUDA loader is not required.
+
+Quality Decision:
+GPU execution improves the Telugu result, but noise and
+distortion must be investigated before production integration.
+
+Next Action:
+Run controlled English, Telugu, and mixed-language benchmarks
+on GPU using the same texts as the CPU baseline.

@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Environment
+.env
+
+# Generated Audio
+backend/outputs/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+
+# Uploaded Voices
+backend/voices/
+
+# Database
+*.db
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# >>> AI VOICE STUDIO RELEASE HYGIENE >>>
+# Local environment files and secrets
+/.env
+/.env.*
+!/.env.example
+/backend/.env
+/backend/.env.*
+!/backend/.env.example
+
+# Local Python environments
+/.venv/
+/indicf5_env/
+/cosyvoice_env/
+
+# Startup-manager state and local logs
+/.ai_voice_studio_state*.json
+/logs/
+
+# Private reference voices, generated audio and databases
+/backend/app/voices/
+/backend/app/outputs/
+/backend/voice.db
+/backend/*.db
+
+# Frontend dependencies and production output
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.vite/
+
+# Python runtime caches
+**/__pycache__/
+*.py[cod]
+
+# Internal milestone workspaces and reports
+/backend/milestone_backups/
+/backend/milestone_reports/
+/backend/tests/.milestone*/
+
+# Operating-system temporary files
+.DS_Store
+Thumbs.db
+
+# Additional local artifacts
+*.bak
+*.backup
+*.delete_pending
+install_log.txt
+backend/install_log.txt
+backend/tts_service_current.txt
+
+# Generated model outputs and downloaded weights
+/backend/ai_models/indicf5/outputs/
+/backend/ai_models/indicf5/server_outputs/
+/backend/ai_models/indicf5/access_test/
+/backend/ai_models/cosyvoice/
+/backend/ai_models/cosyvoice/pretrained_models/
+
+# Local backup snapshots
+/backend/milestone10_1_backup/
+/backend/*.backup.db
+# <<< AI VOICE STUDIO RELEASE HYGIENE <<<
